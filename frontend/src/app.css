@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    p{
+        @apply my-4;
+    }
+    h1{
+        @apply text-5xl;
+        @apply font-bold;
+        @apply pb-2;
+        @apply pt-5;
+        @apply my-2;
+        @apply border-b-2;
+    }
+    h2{
+        @apply text-2xl;
+        @apply font-bold;
+        @apply pt-5;
+        @apply my-2;
+        @apply border-b-2;
+
+
+    }
+    a{
+        @apply text-blue-800;
+    }
+
+    table{
+        @apply my-4;
+        @apply border;
+        @apply p-4;
+        @apply overflow-x-scroll;
+    }
+    th{
+        @apply border;
+        @apply p-4;
+
+    }
+    td{
+        @apply p-4;
+        @apply border;
+    }
+    code{
+        @apply my-2;
+        @apply p-2;
+        @apply rounded-md;
+        @apply border;
+        @apply bg-gray-100;
+        @apply inline-block;
+        @apply w-full;
+        @apply overflow-scroll;
+    }
+
+}

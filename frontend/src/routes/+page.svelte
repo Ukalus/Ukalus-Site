@@ -1,5 +1,5 @@
 <script>
-	import SimpleText from "src/components/SimpleText.svelte";
+
 
 </script>
 <div class="flex flex-row gap-8">
@@ -46,7 +46,7 @@
 
     </div>
     <div class="basis-2/4">
-        <iframe class="absolute d-flex w-[40vw] h-[80vh]" src="http://localhost:8080/projects/RubixCube/index.html" scrolling="no" title="Cube" frameborder="0" width="500" height="500"></iframe>
+        <iframe class="absolute d-flex w-[40vw] h-[80vh]" src="https://ukalus.github.io/MagicCube/" scrolling="no" title="Cube" frameborder="0" width="500" height="500"></iframe>
 
        
         <div class="h-[50vh] py-4 m-0">
@@ -62,20 +62,6 @@
 </div>
 
 <hr class="py-12">
-
-<SimpleText title={"Combining interests"} text={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."}>
-
-</SimpleText>
-
-<br class="my-[15vh]">
-
-<div class="px-[25vw]">
-  <SimpleText title={"Combining interests"} text={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."}>
-
-  </SimpleText>
-</div>
-
-
 
 
 <style>

@@ -1,74 +1,71 @@
-<script>
-
+<script lang="ts">
+  import { Card, Heading, Hr } from "flowbite-svelte";
 
 </script>
-<div class="flex flex-row gap-8">
-    <div class="items-center pb-40 basis-2/4">
-            <hr class="w-[75%]">
-            <div class="flex flex-col gap-3 w-[50%] py-10">
-                <div class="py-2 bg-teal-400 w-[25%]"></div>
-                <div class="py-2 bg-red-600"></div>
-                <div class="py-2 bg-blue-600 w-[45%]"></div>
-            </div>
-            <hr class="w-[50%]">
+<div class="flex flex-row gap-8 h-[80vh]">
+    <div class="grid gap-8content-center  basis-2/4 ">
             <div>
-                <h2 class="text-4xl font-bold py-4 border-none">Hello, my name is <a href="./" class="text-teal-400">Ukalus</a></h2>
-                <h2 class="text-4xl font-bold py-4 border-none">Im a <a href="./" class="text-red-600">Web Developer</a> and <a href="./" class="text-indigo-600">Digital Artist</a></h2>
-                <h2 class="text-4xl font-bold py-4 border-none">Check out some of my <a href="./" class="text-orange-400">Projects</a></h2>
+              <Hr/>
+              <div class="flex flex-col gap-3 w-[50%]">
+                  <div class="py-2 bg-teal-400 w-[25%]"></div>
+                  <div class="py-2 bg-red-600"></div>
+                  <div class="py-2 bg-blue-600 w-[45%]"></div>
+              </div>
+              <Hr/>
             </div>
-            
-            
-            <div class="polka-bg w-full py-12 my-5"></div>
-            <div class="flex flex-row gap-5 pt-4">
-                <div class="flex flex-row">
-                    <div class="triangle-up"></div>
-                    <div class="triangle-down"></div>
-                </div>
-                <div class="square"></div>
-                <div class="circle"></div>
-                <div class="triangle-down"></div>
-                <div class="square"></div>
-                <div class="circle"></div>
-                <div class="flex flex-row">
-                    <div class="triangle-up"></div>
-                    <div class="triangle-down"></div>
-                    <div class="triangle-up"></div>
-                </div>
-                <div class="circle"></div>
-                <div class="triangle-down"></div>
-                
-                <div class="square"></div>
-                <div class="circle"></div>
-                <div class="triangle-up"></div>
-                
+            <div>
+              <div class="dark:bg-slate-800 bg-white dark:border-white border-slate-900 dark:border-2 border-4 drop-shadow-2xl p-5">
+                <Heading class="text-4xl font-bold py-4 border-none">Hello, my name is <a href="./" class="text-teal-400">Ukalus</a></Heading>
+                <Heading class="text-4xl font-bold py-4 border-none">Im a <a href="./" class="text-red-600">Web Developer</a> and <a href="./" class="text-indigo-600">Digital Artist</a></Heading>
+                <Heading class="text-4xl font-bold py-4 border-none">Check out some of my <a href="./" class="text-orange-400">Projects</a></Heading>
+              </div>
+              <div class="polka-bg w-full py-12 my-5"/>
             </div>
-            
+            <div>
+              <Hr/>
+              <div class="flex flex-row gap-5">
+                  <div class="flex flex-row">
+                      <div class="triangle-up"></div>
+                      <div class="triangle-down"></div>
+                  </div>
+                  <div class="square"></div>
+                  <div class="circle"></div>
+                  <div class="triangle-down"></div>
+                  <div class="square"></div>
+                  <div class="circle"></div>
+                  <div class="flex flex-row">
+                      <div class="triangle-up"></div>
+                      <div class="triangle-down"></div>
+                      <div class="triangle-up"></div>
+                  </div>
+                  <div class="circle"></div>
+                  <div class="triangle-down"></div>
+                  
+                  <div class="square"></div>
+                  <div class="circle"></div>
+                  <div class="triangle-up"></div>
+                  
+              </div>
+              <Hr/>
+            </div>
 
     </div>
-    <div class="basis-2/4">
-        <iframe class="absolute d-flex w-[40vw] h-[80vh]" src="https://ukalus.github.io/MagicCube/" scrolling="no" title="Cube" frameborder="0" width="500" height="500"></iframe>
+  
+  <div class="basis-2/4">
+    <Hr/>
+    <iframe  class=" d-flex max-w-full max-h-full w-full h-full" src="https://ukalus.github.io/MagicCube/" scrolling="no" title="Cube" frameborder="0" width="500" height="500"></iframe>
+    <Hr/>
 
-       
-        <div class="h-[50vh] py-4 m-0">
-            <div class="polka-bg   h-[54%]"></div>
-            <div class="bg-gray-100 h-[46%] rounded-tl-full rounded-br-full"></div>
-
-        </div>
-        <div class="polka-bg   h-[30%]"></div>
-
-    </div>
-
-   
+  </div>
 </div>
 
-<hr class="py-12">
+
 
 
 <style>
 .polka-bg{
   background-image: 
     radial-gradient(#dddddd 20%, transparent 20%);
-  background-color: #ffffff;
   background-position: 0 0, 10px 10px;
   background-size: 20px 20px;
 }

@@ -6,7 +6,9 @@ const config = {
 	// for more information about preprocessors
 	
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			fallback: "index.html",
+		}),
 		alias: {
 			'src/*': './src',
 		}

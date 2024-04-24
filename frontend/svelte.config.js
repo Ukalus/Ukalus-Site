@@ -11,6 +11,9 @@ const config = {
 		}),
 		alias: {
 			'src/*': './src',
+		},
+		paths: {
+			base: "/Ukalus-Site"
 		}
 	},
 	preprocess:[ vitePreprocess({})],

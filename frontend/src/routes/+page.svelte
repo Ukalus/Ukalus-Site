@@ -53,7 +53,7 @@
   
   <div class="basis-2/4">
     <Hr/>
-    <iframe  class=" d-flex max-w-full max-h-full w-full h-full" src="https://ukalus.github.io/MagicCube/" scrolling="no" title="Cube" frameborder="0" width="500" height="500"></iframe>
+    <iframe  class=" d-flex max-w-full max-h-full w-full h-full" src="https://ukalus.dev" scrolling="no" title="Cube" frameborder="0" width="500" height="500"></iframe>
     <Hr/>
 
   </div>

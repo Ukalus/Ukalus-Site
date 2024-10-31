@@ -42,8 +42,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@types/three": "0.149.0",
+		"@types/three": "0.169.0",
 		"marked": "4.2.12",
-		"three": "0.150.1"
+		"three": "0.170.0"
 	}
 }

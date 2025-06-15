@@ -1,97 +1,56 @@
 <script lang="ts">
-  import { Card, Heading, Hr } from "flowbite-svelte";
-
-</script>
-<div class="flex flex-row gap-8 h-[80vh]">
-    <div class="grid gap-8content-center  basis-2/4 ">
-            <div>
-              <Hr/>
-              <div class="flex flex-col gap-3 w-[50%]">
-                  <div class="py-2 bg-teal-400 w-[25%]"></div>
-                  <div class="py-2 bg-red-600"></div>
-                  <div class="py-2 bg-blue-600 w-[45%]"></div>
-              </div>
-              <Hr/>
-            </div>
-            <div>
-              <div class="dark:bg-slate-800 bg-white dark:border-white border-slate-900 dark:border-2 border-4 drop-shadow-2xl p-5">
-                <Heading class="text-4xl font-bold py-4 border-none">Hello, my name is <a href="./" class="text-teal-400">Ukalus</a></Heading>
-                <Heading class="text-4xl font-bold py-4 border-none">Im a <a href="./" class="text-red-600">Web Developer</a> and <a href="./" class="text-indigo-600">Digital Artist</a></Heading>
-                <Heading class="text-4xl font-bold py-4 border-none">Check out some of my <a href="./" class="text-orange-400">Projects</a></Heading>
-              </div>
-              <div class="polka-bg w-full py-12 my-5"/>
-            </div>
-            <div>
-              <Hr/>
-              <div class="flex flex-row gap-5">
-                  <div class="flex flex-row">
-                      <div class="triangle-up"></div>
-                      <div class="triangle-down"></div>
-                  </div>
-                  <div class="square"></div>
-                  <div class="circle"></div>
-                  <div class="triangle-down"></div>
-                  <div class="square"></div>
-                  <div class="circle"></div>
-                  <div class="flex flex-row">
-                      <div class="triangle-up"></div>
-                      <div class="triangle-down"></div>
-                      <div class="triangle-up"></div>
-                  </div>
-                  <div class="circle"></div>
-                  <div class="triangle-down"></div>
-                  
-                  <div class="square"></div>
-                  <div class="circle"></div>
-                  <div class="triangle-up"></div>
-                  
-              </div>
-              <Hr/>
-            </div>
-
-    </div>
+  import {  Heading } from "flowbite-svelte";
+	import MatrixCharacters from "src/components/MatrixCharacters.svelte";
   
-  <div class="basis-2/4">
-    <Hr/>
-    <iframe  class=" d-flex max-w-full max-h-full w-full h-full" src="https://ukalus.dev" scrolling="no" title="Cube" frameborder="0" width="500" height="500"></iframe>
-    <Hr/>
-
-  </div>
+  let scrambleProgress= [];
+  $: scrambleAverage = (scrambleProgress.reduce((acc, val) => acc + val, 0) / scrambleProgress.length).toFixed(2);
+</script>
+<div class="
+  bg-gradient-to-b
+  from-slate-900
+  to-slate-800 
+  p-60
+  h-[100vh]  
+  "
+  >
+  <div class="
+    
+    flex 
+    flex-row 
+    gap-8 
+    
+    justify-center
+    justify-items-center 
+    items-center">
+    <div class="text-white text-[12rem]">
+      ◯
+    </div>
+    <div class="grid gap-4">
+              
+              <div class="p-5">
+                <Heading class="text-gray-300 py-4 border-none">
+                  <MatrixCharacters bind:percentSolved={scrambleProgress[0]} TARGET="Welcome Traveler, im"/>
+                  <a href="./" class="text-teal-400">Ukalus</a>
+                  
+                </Heading>
+                <Heading class="text-gray-300 py-4 border-none">
+                  <MatrixCharacters  bind:percentSolved={scrambleProgress[1]} TARGET="I do"/> <a href="./" class="text-red-600">Programming</a> <MatrixCharacters bind:percentSolved={scrambleProgress[2]} TARGET="and"/> <a href="./" class="text-indigo-600">Digital Art</a>
+                </Heading>
+                <Heading 
+                  class="text-gray-300 py-4 border-none"><MatrixCharacters  bind:percentSolved={scrambleProgress[4]} TARGET="Check out some of my"/> <a href="./" class="text-orange-400">Projects</a>
+                </Heading>
+                <Heading tag="h6"
+                  class="text-gray-400 py-4 border-none">
+                [ Solving... current progress: {scrambleAverage}% ]
+                </Heading>
+              </div>
+              
+              
+    </div>
+    
+</div>
+<div class="text-white text-[8rem] flex justify-center">
+  ⌄
 </div>
 
-
-
-
-<style>
-.polka-bg{
-  background-image: 
-    radial-gradient(#dddddd 20%, transparent 20%);
-  background-position: 0 0, 10px 10px;
-  background-size: 20px 20px;
-}
-.circle {
-  height: 50px;
-  width: 50px;
-  background-color: #ED3939;
-  border-radius: 50%;
-}
-.square {
-  height: 50px;
-  width: 50px;
-  background-color: #302CED;
-}
-.triangle-up {
-	width: 0;
-	height: 0;
-	border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
-	border-bottom: 50px solid #59C376;
-}
-.triangle-down {
-	width: 0;
-	height: 0;
-	border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
-	border-top: 50px solid #E0A100;
-}
-</style>
+</div>

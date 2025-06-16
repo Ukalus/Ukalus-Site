@@ -68,20 +68,36 @@ const colors = {
     white : new THREE.MeshBasicMaterial({color: 0xffffff}),
     blue : new THREE.MeshBasicMaterial({color: 0x0000FF}),
 }
-export function initCube(){
+export function initCube(canvas){
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(50, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
     camera.position.set(5,0,0)
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setClearColor(0x000000,0)
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    console.log(document.getElementById("cubeContainer"))
-    document.body.appendChild(renderer.domElement);
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+    renderer.setClearColor(0x000000, 0);
+    renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
 
     const rubixParent = new THREE.Object3D();
     let rubixCube = createRubixCube(3);
-
-
+    
+    const radius = 7;
+        const segments = 24;
+        const geometry = new THREE.CircleGeometry(radius, segments);
+    
+        // Create a material — for example, a simple basic material
+        const material = new THREE.MeshBasicMaterial({ color: 0x1e293b, side: THREE.DoubleSide });
+    
+        // Create the mesh
+        const circle = new THREE.Mesh(geometry, material);
+    
+        // Rotate the circle so it’s flat on the XZ plane (default is facing +Z)
+        circle.rotation.x = - Math.PI / 2;
+    
+        // Position it if you want, e.g., at y=0
+        circle.position.y = -2;
+    
+        // Add to the scene
+        scene.add(circle);
+      scene.add(new THREE.HemisphereLight(0xffffff, 0x444444, 1.5));
 
     for(let cubie of rubixCube){
 

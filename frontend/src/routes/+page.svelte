@@ -1,6 +1,8 @@
 <script lang="ts">
   import {  Heading } from "flowbite-svelte";
 	import MatrixCharacters from "src/components/MatrixCharacters.svelte";
+	import MagicCube from "src/components/projects/magicCube/MagicCube.svelte";
+	import WalkingCharacter from "src/components/WalkingCharacter/WalkingCharacter.svelte";
   
   let scrambleProgress= [];
   $: scrambleAverage = (scrambleProgress.reduce((acc, val) => acc + val, 0) / scrambleProgress.length).toFixed(2);
@@ -10,7 +12,7 @@
   from-slate-900
   to-slate-800 
   p-60
-  h-[100vh]  
+   
   "
   >
   <div class="
@@ -52,5 +54,20 @@
 <div class="text-white text-[8rem] flex justify-center">
   ⌄
 </div>
+<div class="flex pt-40">
+  <WalkingCharacter/>
 
 </div>
+<div>
+    <Heading class="text-gray-300 p-4 border-none text-center">"At vero eos et accusam, et justo duo"</Heading>
+  </div>
+     <MagicCube></MagicCube>
+<div>
+    <Heading class="text-gray-300 p-4 border-none text-center">"Et justo duo, at vero eos et accusam"</Heading>
+  </div>
+</div>
+
+
+
+
+
